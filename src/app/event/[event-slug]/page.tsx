@@ -7,11 +7,16 @@ import { clerkClient } from "@clerk/nextjs/server";
 import { notFound } from "next/navigation";
 import { BookingForm } from "@/components/booking/BookingForm"; // <-- NEUER IMPORT
 
-export default async function BookingPage({
-  params,
-}: {
-  params: { "event-slug": string };
-}) {
+// WIR FÜGEN DIESEN TYP HINZU
+type BookingPageProps = {
+  params: {
+    "event-slug": string;
+  };
+};
+
+// WIR VERWENDEN DEN NEUEN TYP IN DIESER ZEILE
+export default async function BookingPage({ params }: BookingPageProps) {
+  // Der Rest der Funktion (ab hier) bleibt exakt gleich
   const event = await db.query.events.findFirst({
     where: eq(events.slug, params["event-slug"]),
   });
@@ -19,7 +24,7 @@ export default async function BookingPage({
   if (!event) {
     notFound();
   }
-
+  
   const client = await clerkClient();
   const host = await client.users.getUser(event.userId);
 
