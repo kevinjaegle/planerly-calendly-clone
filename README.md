@@ -1,36 +1,42 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Planerly - Ein Klon der Terminbuchungs-App Calendly
 
-## Getting Started
+Planerly ist ein Full-Stack-Webanwendung, die die Kernfunktionalitäten von Calendly nachbildet. Benutzer können sich registrieren, verschiedene Event-Typen erstellen, ihre wöchentliche Verfügbarkeit festlegen und einen einzigartigen Link teilen, über den andere Personen Termine buchen können.
 
-First, run the development server:
+**Live-Demo:** [Wird in Kürze hier eingefügt]
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+![Planerly Screenshot](https://i.imgur.com/c16dbf.png)
+*(Du kannst diesen Screenshot später durch einen eigenen ersetzen)*
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Verwendete Technologien (Tech Stack)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Frontend:** Next.js 15, React 19, TypeScript, Tailwind CSS
+- **UI-Komponenten:** Shadcn UI
+- **Backend:** Next.js App Router (Server Actions)
+- **Authentifizierung:** Clerk
+- **Datenbank:** Neon (Serverless PostgreSQL)
+- **ORM:** Drizzle ORM
+- **Deployment:** Vercel
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## Features
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- ✅ **Benutzer-Authentifizierung:** Sichere Registrierung und Anmeldung (E-Mail/Passwort & Social Login via Google).
+- ✅ **Event-Management:** Erstellen, Anzeigen und Verwalten von verschiedenen Event-Typen (z.B. "30-Minuten-Meeting").
+- ✅ **Zeitplan-Management:** Benutzer können ihre wöchentliche Verfügbarkeit taggenau mit Start- und Endzeiten festlegen.
+- ✅ **Dynamische Buchungsseiten:** Jedes Event hat eine einzigartige, öffentliche URL (`/event/ihr-event-slug`).
+- ✅ **Interaktiver Kalender:** Eine Kalender-Ansicht zur Auswahl des gewünschten Datums.
+- ✅ **Automatische Zeitfenster-Berechnung:** Das System berechnet basierend auf der Event-Dauer und der Verfügbarkeit des Veranstalters die buchbaren Zeitfenster.
+- ✅ **Buchungsprozess:** Gäste können ein Zeitfenster auswählen, ihre Daten eingeben und den Termin buchen, der in der Datenbank gespeichert wird.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## Lernprozess & Danksagung
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Dieses Projekt wurde als intensive Lernübung umgesetzt, um moderne Web-Technologien in einem Full-Stack-Kontext zu erlernen und anzuwenden. Die grundlegende Projektidee und -struktur basiert auf diesem YouTube-Tutorial: [Link zum YouTube-Video hier einfügen, falls du ihn noch hast].
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Während der Umsetzung wurde ich von Googles KI-Assistent Gemini unterstützt, insbesondere beim Debugging von realen Problemen wie Hydration-Fehlern, Versionskonflikten zwischen Paketen und komplexen Datenbank-Migrationen. Dieser Prozess simulierte ein praxisnahes Szenario der Problemlösung mit Hilfe von modernen KI-Werkzeugen.
+
+---
