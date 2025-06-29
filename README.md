@@ -4,9 +4,7 @@ Planerly ist ein Full-Stack-Webanwendung, die die Kernfunktionalitäten von Cale
 
 **Live-Demo:** [Wird in Kürze hier eingefügt]
 
-![Planerly Screenshot](https://i.imgur.com/c16dbf.png)
-*(Du kannst diesen Screenshot später durch einen eigenen ersetzen)*
-
+![Image](https://github.com/user-attachments/assets/3668bcaa-62bd-4878-9fbd-d1dc3e378a1a)
 ---
 
 ## Verwendete Technologien (Tech Stack)
