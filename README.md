@@ -2,7 +2,7 @@
 
 Planerly ist ein Full-Stack-Webanwendung, die die Kernfunktionalitäten von Calendly nachbildet. Benutzer können sich registrieren, verschiedene Event-Typen erstellen, ihre wöchentliche Verfügbarkeit festlegen und einen einzigartigen Link teilen, über den andere Personen Termine buchen können.
 
-**Live-Demo:** [Wird in Kürze hier eingefügt]
+**Live-Demo:** planerly-calendly-clone.vercel.app
 
 ![Image](https://github.com/user-attachments/assets/3668bcaa-62bd-4878-9fbd-d1dc3e378a1a)
 ---
