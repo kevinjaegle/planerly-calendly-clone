@@ -3,8 +3,8 @@
 "use server";
 
 import { db } from "@/lib/db";
-// Wichtig: Wir importieren jetzt 'bookings' und 'schedules' aus dem Schema
-import { bookings, schedules } from "@/lib/db/schema";
+// Wichtig: Wir importieren jetzt 'bookings' aus dem Schema
+import { bookings } from "@/lib/db/schema";
 import { revalidatePath } from "next/cache";
 
 // =================================================================
@@ -40,6 +40,7 @@ export async function getAvailableTimeSlots(
   const endTime = new Date(date);
   endTime.setHours(endHour, endMinute, 0, 0);
 
+  // eslint-disable-next-line prefer-const
   let currentTime = startTime;
 
   while (currentTime < endTime) {

@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <ClerkProvider> {/* HIER STARTET DER PROVIDER */}
       <html lang="de">
-        <body>
+        <body className={inter.className}> {/* <-- HIER ANPASSEN */}
           <Navbar />
           {children}
         </body>
